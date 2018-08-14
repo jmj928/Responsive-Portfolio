@@ -44,8 +44,8 @@ a{
 footer{
     background-color: #666666;
     text-align: center;
-    /* flex-shrink: 0; */
-    position: absolute; 
+    clear: both;
+    /* position: relative;  */
     left: 0;
     bottom: 0;
     width: 100%;
@@ -113,7 +113,7 @@ h4{
     font-size: 14px;
     
 }
-.push {
+.push{
   height: 105px;
 }
 @media  screen and (max-width: 980px){
@@ -122,6 +122,9 @@ h4{
 @media  screen and (max-width: 768px){
     .mainContent{
         margin: 20px;
+    }
+    footer{
+        position: absolute;
     }
 }
 @media screen and (max-width: 640px){
@@ -137,7 +140,7 @@ h4{
         width: 80%;
         /* margin: 10px 20px; */
         height: auto;
-        margin: 10px 20px -105px;
+        flex: 1 0 auto;
     }
     .about{
         width: 100%;
@@ -169,12 +172,21 @@ h4{
         padding: 20px;
        
     }
-    footer{
-        bottom: 0;
-        position: absolute;
+    .footer{
+     flex-shrink: 0;
+     /* padding: 20px; */
+     position: relative;
     }
     h4{
         width: 100%;
+    }
+    body{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+    html{
+        height: 100%;
     }
   
     
